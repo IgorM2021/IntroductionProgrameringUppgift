@@ -30,13 +30,13 @@ public class Test1 {
         //Expected number of rows
         Count test = new Count();
 
-//Assert
+//Act
         test.readLine("Test test  TEST");
         test.readLine("1231  123123");
         test.readLine("asdasdfasdf DFGHJ");
         test.readLine("stop");
 
-
+//Assert
         assertEquals(3, test.numberRows());
 
     }
@@ -47,15 +47,14 @@ public class Test1 {
         //Expected nubmer of rows
         Count test = new Count();
 
-//Assert
+//Act
         test.readLine("Test test  TEST");
         test.readLine("1231  1");
         test.readLine("as HJ");
         test.readLine("stop");
-
+//Assert
 
         assertEquals(21, test.numberLetter());
-
 
     }
 
@@ -65,32 +64,24 @@ public class Test1 {
 
         Count test = new Count();
 
-
-//Assert
+//Act
         test.readLine("Test test  TEST");
         test.readLine("1231  1");
         test.readLine("vägar HJ");
         test.readLine("stop");
 
-
-
-        assertEquals( "vägar", test.longWord());
+//Assert
+        assertEquals("vägar", test.longWord());
 
     }
+
     @Test
     public void testStop() {
 //Arrange
 
         Count test = new Count();
 
-
 //Assert
-       // test.readLine("Test test  TEST");
-       // test.readLine("1231  1");
-      // test.readLine("vägar HJ");
-       // test.readLine("stop");
-
-
 
         assertFalse(test.readLine("stop"));
 

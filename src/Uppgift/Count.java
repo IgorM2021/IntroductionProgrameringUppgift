@@ -8,7 +8,7 @@ public class Count {
     private int words = 0;
     private String longestWord = "";
 
-    //Skapa konstruktor Test2
+    //Skapa konstruktör Count utan in parameter
     public Count() {
 
     }
@@ -18,8 +18,7 @@ public class Count {
             return false;                                     //stoppa kod med inmatat ord "stop"
         if (line.isBlank())
             return true;                                      //töm rad skall inte räknas
-        //  if(line.length() > longestWord.length())
-        //  longestWord = line;
+
         rows++;                                                //räkna rader
         words++;                                                //räkna ord
         String tempWord = "";
@@ -35,8 +34,8 @@ public class Count {
                 }
                 tempWord = "";
             }
-            if(tempWord.equalsIgnoreCase("stop")){
-                count-=4;         //ta bort 4 bokstav från stop ord
+            if (tempWord.equalsIgnoreCase("stop")) {
+                count -= 4;         //ta bort 4 bokstav från stop ord
                 words--;         //ta bort stop ord
                 return false;
             }
@@ -46,19 +45,23 @@ public class Count {
         }
         return true;
     }
-    //metoden som retunerar den längst ord
+
+    //metoden som returnerar den längst ord
     public String longWord() {
         return longestWord;
     }
-    //metoden som retunerar antal ord
+
+    //metoden som returnerar antal ord
     public int numberWord() {
         return words;
     }
-    //metoden som retunerar antal bokstav
+
+    //metoden som returnerar antal bokstav
     public int numberLetter() {
         return count;
     }
-//metoden som retunerar antal rader
+
+    //metoden som returnerar antal rader
     public int numberRows() {
         return rows;
     }
